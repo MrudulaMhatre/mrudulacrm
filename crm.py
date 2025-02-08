@@ -7,7 +7,7 @@ import pandas as pd
 import plotly.express as px
 
 # Firebase Initialization
-
+firebase_credentials = json.loads(os.getenv("FIREBASE_CREDENTIALS"))
 if not firebase_admin._apps:
     cred = credentials.Certificate(firebase_credentials)
     firebase_admin.initialize_app(cred)
